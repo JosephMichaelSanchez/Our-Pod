@@ -32,6 +32,10 @@ function Nav() {
               My House Details
             </Link>
 
+            <Link className="navLink" to="/createpod">
+              Create A Pod
+            </Link>
+
             <Link className="navLink" to="/info">
               Info Page
             </Link>

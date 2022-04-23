@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import HouseDetailsPage from '../HouseDetailsPage/HouseDetailsPage';
+import CreatePodPage from '../CreatePodPage/CreatePodPage';
 
 import './App.css';
 
@@ -75,6 +76,14 @@ function App() {
             path="/myhousedetails"
           >
             <HouseDetailsPage />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows Create Pod Page else shows LoginPage
+            exact
+            path="/createpod"
+          >
+            <CreatePodPage />
           </ProtectedRoute>
 
           <Route
