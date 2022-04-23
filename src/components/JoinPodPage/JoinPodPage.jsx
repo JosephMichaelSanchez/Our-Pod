@@ -7,9 +7,15 @@ function JoinPodPage() {
 
     const pod = useSelector(store => store.findPodReducer);
     const history = useHistory();
+    const dispatch = useDispatch();
 
     const handleSubmit = () => {
-        console.log('clicked');
+        console.log(pod.id);
+
+        dispatch({
+            type: 'JOIN_POD',
+            payload: pod.id
+        })
     }
 
     return (
