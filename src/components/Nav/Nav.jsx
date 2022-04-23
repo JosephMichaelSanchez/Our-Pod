@@ -36,6 +36,10 @@ function Nav() {
               Create A Pod
             </Link>
 
+            <Link className="navLink" to="/findpod">
+              Join A Pod
+            </Link>
+
             <Link className="navLink" to="/info">
               Info Page
             </Link>

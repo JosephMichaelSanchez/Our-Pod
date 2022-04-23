@@ -21,6 +21,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import HouseDetailsPage from '../HouseDetailsPage/HouseDetailsPage';
 import CreatePodPage from '../CreatePodPage/CreatePodPage';
+import FindPodPage from '../FindPodPage/FindPodPage';
 
 import './App.css';
 
