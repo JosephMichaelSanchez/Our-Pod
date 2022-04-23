@@ -87,6 +87,14 @@ function App() {
             <CreatePodPage />
           </ProtectedRoute>
 
+          <ProtectedRoute
+            // logged in shows Find Pod Page else shows LoginPage
+            exact
+            path="/findpod"
+          >
+            <FindPodPage />
+          </ProtectedRoute>
+
           <Route
             exact
             path="/login"
