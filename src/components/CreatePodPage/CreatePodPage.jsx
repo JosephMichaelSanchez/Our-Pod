@@ -6,10 +6,18 @@ function CreatePodPage() {
 
     const dispatch = useDispatch();
     const [podName, setPodName] = useState('');
-    const [keyCode, seyKeyCode] = useState('');
+    const [keyCode, setKeyCode] = useState('');
 
-    const handleSubmit = () => {
-        console.log('clicked');
+    const handleSubmit = (event) => {
+        event.preventDefault()
+    
+        const newPod = {
+            pod_name: podName,
+            key_code: keyCode
+        }
+        console.log(newPod);
+        setPodName('');
+        setKeyCode('');
     }
 
     return (
