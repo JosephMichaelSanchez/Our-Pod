@@ -5,6 +5,7 @@ import userSaga from './user.saga';
 import houseDetailsSaga from './houseDetails.saga';
 import createPodSaga from './createPod.saga';
 import findPodSaga from './findPod.saga';
+import joinPodSaga from './joinPod.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -21,5 +22,6 @@ export default function* rootSaga() {
     houseDetailsSaga(),
     createPodSaga(),
     findPodSaga(),
+    joinPodSaga(),
   ]);
 }
