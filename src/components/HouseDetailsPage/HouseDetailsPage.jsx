@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import './HouseDetailsPage.css'
 
 function HouseDetailsPage() {
 
@@ -7,7 +8,9 @@ function HouseDetailsPage() {
 
     return (
         <>
-            <h2>THIS IS THE HOUSE DETAILS PAGE</h2>
+            <div className="body">
+                <h2>THIS IS THE HOUSE DETAILS PAGE</h2>
+            </div>
         </>
     )
 }
