@@ -6,10 +6,9 @@ const {
   } = require('../modules/authentication-middleware');
 
   router.post('/', rejectUnauthenticated, (req, res) => {
-    const id = req.user.id
+    const id = req.user.id;
 
-    const query = `INSERT INTO "user" ("first_name", "last_name", "address", "phone", "email")
-    VALUES ($1, $2, $3, $4, $5)
+    const query = `UPDATE "user" SET "first_name" = $1, "last_name" = $2, "address" = $3, "phone" = $4, "email" = $5
     WHERE "id" = $6;`;
     const values = [req.body.first_name, req.body.last_name, req.body.address, req.body.phone, req.body.email, id]
     pool.query(query, values)

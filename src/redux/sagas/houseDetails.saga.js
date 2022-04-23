@@ -15,3 +15,5 @@ function* addDetails(action) {
     }
     
 }
+
+export default houseDetailsSaga;
