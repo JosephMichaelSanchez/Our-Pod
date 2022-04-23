@@ -16,7 +16,7 @@ const {
             res.sendStatus(201)
         })
         .catch(err => {
-            console.log('ERROR ADDING HOUSE DETAILS', err);
+            console.log('ERROR CREATING NEW POD', err);
             res.sendStatus(500)
         })
 
