@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './HouseDetailsPage.css'
 
 function HouseDetailsPage() {
 
+
+    const dispatch = useDispatch();
     const user = useSelector((store) => store.user);
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -12,7 +14,19 @@ function HouseDetailsPage() {
     const [email, setEmail] = useState('')
 
     const handleSubmit = () => {
-        console.log(firstName);
+        const houseDetails = {
+            first_name: firstName,
+            last_name: lastName,
+            address: streetAddress,
+            phone: phoneNumber,
+            email: email
+        }
+        console.log(houseDetails);
+
+        dispatch({
+            type: 'ADD_DETAILS',
+            payload: houseDetails
+        })
     }
 
     return (
