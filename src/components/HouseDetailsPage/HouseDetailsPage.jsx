@@ -11,6 +11,10 @@ function HouseDetailsPage() {
     const [phoneNumber, setPhoneNumber] = useState('')
     const [email, setEmail] = useState('')
 
+    const handleSubmit = () => {
+        console.log(firstName);
+    }
+
     return (
         <>
             <div className="body">
@@ -76,6 +80,7 @@ function HouseDetailsPage() {
                         />
 
                     </div>
+                    <button onClick={handleSubmit}>SUBMIT DETAILS</button>
                 </form>
             </div>
         </>
