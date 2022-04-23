@@ -6,7 +6,7 @@ const {
   } = require('../modules/authentication-middleware');
 
 router.get('/:key_code', rejectUnauthenticated, (req, res) => {
-    
+    console.log(req.params.key_code);
     
     const query = `SELECT * FROM pods WHERE "key_code" = $1`;
     const values = [req.params.key_code]

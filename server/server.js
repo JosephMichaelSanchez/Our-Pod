@@ -11,6 +11,7 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 const houseDetailsRouter = require('./routes/houseDetails.router');
 const createPodRouter = require('./routes/createPod.router');
+const findPodRouter = require('./routes/findPod.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -26,7 +27,8 @@ app.use(passport.session());
 /* Routes */
 app.use('/api/user', userRouter);
 app.use('/api/housedetails', houseDetailsRouter);
-app.use('/api/createpod', createPodRouter)
+app.use('/api/createpod', createPodRouter);
+app.use('/api/findpod', findPodRouter);
 
 
 // Serve static files

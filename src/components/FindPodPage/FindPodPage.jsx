@@ -11,8 +11,7 @@ function FindPodPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(keyCode);
-
+        
         dispatch({
             type: 'FIND_POD',
             payload: keyCode
