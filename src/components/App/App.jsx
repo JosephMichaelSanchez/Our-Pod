@@ -22,6 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import HouseDetailsPage from '../HouseDetailsPage/HouseDetailsPage';
 import CreatePodPage from '../CreatePodPage/CreatePodPage';
 import FindPodPage from '../FindPodPage/FindPodPage';
+import JoinPodPage from '../JoinPodPage/JoinPodPage';
 
 import './App.css';
 
@@ -93,6 +94,14 @@ function App() {
             path="/findpod"
           >
             <FindPodPage />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows Find Pod Page else shows LoginPage
+            exact
+            path="/joinpod"
+          >
+            <JoinPodPage />
           </ProtectedRoute>
 
           <Route

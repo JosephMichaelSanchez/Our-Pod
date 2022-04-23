@@ -17,7 +17,7 @@ function FindPodPage() {
             payload: keyCode
         })
 
-        // history.push('/joinpod');
+        history.push('/joinpod');
     }
 
     return (
