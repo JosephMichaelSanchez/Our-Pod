@@ -18,6 +18,11 @@ function CreatePodPage() {
         console.log(newPod);
         setPodName('');
         setKeyCode('');
+
+        dispatch({
+            type: 'CREATE_POD',
+            payload: newPod
+        })
     }
 
     return (
