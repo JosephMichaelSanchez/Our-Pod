@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import swal from 'sweetalert';
+
 import './JoinPodPage.css'
 
 function JoinPodPage() {
@@ -16,6 +18,16 @@ function JoinPodPage() {
             type: 'JOIN_POD',
             payload: pod.id
         })
+
+        swal({
+            title: "Success!",
+            text: `You have joined ${pod.pod_name} !`,
+            icon: "success",
+            button: "OK!",
+          });
+        
+        history.push('/user');
+
     }
 
     return (
