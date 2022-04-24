@@ -28,6 +28,10 @@ function Nav() {
               Home
             </Link>
 
+            <Link className="navLink" to="/mypod">
+              My Pod
+            </Link>
+
             <Link className="navLink" to="/myhousedetails">
               My House Details
             </Link>
