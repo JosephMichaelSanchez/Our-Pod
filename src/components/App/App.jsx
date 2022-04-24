@@ -76,7 +76,7 @@ function App() {
           <ProtectedRoute
             // logged in shows My Pod Page else shows LoginPage
             exact
-            path="/mypod/:id"
+            path="/mypod"
           >
             <MyPodPage />
           </ProtectedRoute>
