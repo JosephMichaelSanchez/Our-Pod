@@ -7,14 +7,13 @@ function* myPodSaga() {
 
 function* getUserPod(action) {
     console.log('IN getUserPod');
-    const userPod = action.payload
     try {
-        const thePod = yield axios.get(`api/mainpod/${userPod}`)
-        yield put({type: 'SET_MAIN_POD', payload: thePod.data})
+        const thePod = yield axios.get(`/api/mypod`)
+        yield put({type: 'SET_USER_POD', payload: thePod.data})
         console.log(thePod.data);
         
     } catch {
-        console.log('ERROR GETTING MAIN POD');
+        console.log('ERROR GETTING USER POD');
         
     }
     
