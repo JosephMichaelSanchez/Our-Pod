@@ -28,7 +28,7 @@ function Nav() {
               Home
             </Link>
 
-            <Link className="navLink" to="/mypod">
+            <Link className="navLink" to={`/mypod/${user.pod_id}`}>
               My Pod
             </Link>
 
