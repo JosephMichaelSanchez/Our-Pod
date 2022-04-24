@@ -8,6 +8,7 @@ import findPodSaga from './findPod.saga';
 import joinPodSaga from './joinPod.saga';
 import myPodSaga from './myPod.saga';
 import getDatesSaga from './getDates.saga';
+import podInfoSaga from './podInfo.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -27,5 +28,6 @@ export default function* rootSaga() {
     joinPodSaga(),
     myPodSaga(),
     getDatesSaga(),
+    podInfoSaga(),
   ]);
 }
