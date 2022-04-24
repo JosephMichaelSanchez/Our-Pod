@@ -13,6 +13,7 @@ const houseDetailsRouter = require('./routes/houseDetails.router');
 const createPodRouter = require('./routes/createPod.router');
 const findPodRouter = require('./routes/findPod.router');
 const joinPodRouter = require('./routes/joinPod.router');
+const myPodRouter = require('./routes/myPod.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -31,6 +32,7 @@ app.use('/api/housedetails', houseDetailsRouter);
 app.use('/api/createpod', createPodRouter);
 app.use('/api/findpod', findPodRouter);
 app.use('/api/joinpod', joinPodRouter)
+app.use('/api/mypod', myPodRouter);
 
 
 // Serve static files
