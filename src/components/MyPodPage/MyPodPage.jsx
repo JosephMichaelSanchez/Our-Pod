@@ -9,6 +9,7 @@ function MyPodPage() {
     const dispatch = useDispatch();
     const {pod_id} = useParams();
     const user = useSelector(store => store.user);
+    const podList = useSelector(store => store.myPodReducer)
 
     useEffect(() => {
         dispatch({
@@ -30,6 +31,18 @@ function MyPodPage() {
         <>
             <div className="body">
                 <h2>MY POD PAGE</h2>
+                <div className="podMemberContainer">
+                    {podList.map(member => {
+                        return (
+                            <PodMember
+                            key={member.id}
+                            member={member}
+                            />
+                        )
+                    })}
+
+                </div>
+
             </div>
         </>
     )

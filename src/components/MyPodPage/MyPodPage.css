@@ -2,3 +2,12 @@
     justify-content: center;
     text-align: center;
 }
+
+.podMemberContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 50px;
+
+}
