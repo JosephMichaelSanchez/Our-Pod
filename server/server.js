@@ -15,6 +15,8 @@ const findPodRouter = require('./routes/findPod.router');
 const joinPodRouter = require('./routes/joinPod.router');
 const myPodRouter = require('./routes/myPod.router');
 const getDatesRouter = require('./routes/getDates.router');
+const podInfoRouter = require('./routes/podInfo.router');
+
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -35,6 +37,7 @@ app.use('/api/findpod', findPodRouter);
 app.use('/api/joinpod', joinPodRouter)
 app.use('/api/mypod', myPodRouter);
 app.use('/api/dates', getDatesRouter)
+app.use('/api/podinfo', podInfoRouter)
 
 
 // Serve static files
