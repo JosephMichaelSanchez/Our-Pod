@@ -8,9 +8,10 @@ import './MyPodPage.css'
 function MyPodPage() {
     const history = useHistory();
     const dispatch = useDispatch();
-    const {pod_id} = useParams();
+    const { pod_id } = useParams();
     const user = useSelector(store => store.user);
-    const podList = useSelector(store => store.myPodReducer)
+    const podList = useSelector(store => store.myPodReducer);
+    const dateList = useSelector(store => store.podDatesReducer);
 
     useEffect(() => {
         dispatch({
@@ -35,11 +36,33 @@ function MyPodPage() {
                     {podList.map(member => {
                         return (
                             <PodMember
-                            key={member.id}
-                            member={member}
+                                key={member.id}
+                                member={member}
                             />
                         )
                     })}
+
+                </div>
+                <div>
+                    <table className="dateTable">
+                        <tr>
+                            <td>DATE</td>
+                            <td>HOST</td>
+                            <td>ADMIN</td>
+                        </tr>
+                        {dateList.map(date => {
+                            return (
+                                <TableRow
+                                    key={date.id}
+                                    date={date}
+                                />
+                            )
+                        })}
+
+
+
+                    </table>
+
 
                 </div>
 
