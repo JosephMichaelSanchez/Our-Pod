@@ -20,10 +20,9 @@ function MyPodPage() {
         //     type: 'GET_POD_INFO',
         //     payload: user.pod_id
         // })
-        // dispatch({
-        //     type: 'GET_DATES',
-        //     payload: id
-        // })
+        dispatch({
+            type: 'GET_DATES'
+        })
     }, [])
 
 
