@@ -20,6 +20,7 @@ const addHostRouter = require('./routes/addHost.router');
 const cancelHostRouter = require('./routes/cancelHost.router');
 const deleteDateRouter = require('./routes/deleteDate.router');
 const createDateRouter = require('./routes/createDate.router');
+const kickMemberRouter = require('./routes/kickMember.router');
 
 
 // Body parser middleware
@@ -46,6 +47,7 @@ app.use('/api/host', addHostRouter);
 app.use('/api/cancel', cancelHostRouter);
 app.use('/api/delete', deleteDateRouter);
 app.use('/api/createdate', createDateRouter);
+app.use('/api/kickmember', kickMemberRouter);
 
 
 // Serve static files
