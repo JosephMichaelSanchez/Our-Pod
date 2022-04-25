@@ -13,6 +13,7 @@ function MyPodPage() {
     const user = useSelector(store => store.user);
     const podList = useSelector(store => store.myPodReducer);
     const dateList = useSelector(store => store.podDatesReducer);
+    const podInfo = useSelector(store => store.podInfoReducer);
 
     useEffect(() => {
         dispatch({
@@ -43,6 +44,12 @@ function MyPodPage() {
                     })}
 
                 </div>
+
+                <div className="adminButtons">
+                    {user.id == podInfo.admin_id && <button>EDIT POD</button>}
+                    {user.id == podInfo.admin_id && <button onClick={() => { history.push('/dateform') }}>ADD DATES</button>}
+                </div>
+
                 <div>
                     <table className="dateTable">
                         <tr>
