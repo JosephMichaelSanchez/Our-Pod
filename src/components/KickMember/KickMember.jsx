@@ -4,6 +4,10 @@ import './KickMember.css'
 
 function KickMember({member}) {
 
+    const dispatch = useDispatch();
+    const user = useSelector(store => store.user);
+    const podInfo = useSelector(store => store.podInfoReducer);
+
     return (
         <>
             <div key={member.id} className="memberDiv">
@@ -12,6 +16,7 @@ function KickMember({member}) {
                 <p>{member.address}</p>
                 <p>{member.phone}</p>
                 <p>{member.email}</p>
+                <p>{member.last_name != user.last_name ? <button>REMOVE</button> : <span>ADMIN</span>}</p>
 
             </div>
         </>
