@@ -18,6 +18,7 @@ const getDatesRouter = require('./routes/getDates.router');
 const podInfoRouter = require('./routes/podInfo.router');
 const addHostRouter = require('./routes/addHost.router');
 const cancelHostRouter = require('./routes/cancelHost.router');
+const deleteDateRouter = require('./routes/deleteDate.router');
 
 
 // Body parser middleware
@@ -38,10 +39,11 @@ app.use('/api/createpod', createPodRouter);
 app.use('/api/findpod', findPodRouter);
 app.use('/api/joinpod', joinPodRouter)
 app.use('/api/mypod', myPodRouter);
-app.use('/api/dates', getDatesRouter)
-app.use('/api/podinfo', podInfoRouter)
-app.use('/api/host', addHostRouter)
-app.use('/api/cancel', cancelHostRouter)
+app.use('/api/dates', getDatesRouter);
+app.use('/api/podinfo', podInfoRouter);
+app.use('/api/host', addHostRouter);
+app.use('/api/cancel', cancelHostRouter);
+app.use('/api/delete', deleteDateRouter);
 
 
 // Serve static files
