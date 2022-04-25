@@ -10,7 +10,7 @@ function* addHost(action) {
     const date = action.payload
     
     try {
-        yield axios.put(`api/host/${date}`)
+        yield axios.put(`/api/host/${date}`)
         yield put({type: 'GET_DATES'})
         console.log(podDates.data);
         
