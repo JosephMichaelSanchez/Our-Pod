@@ -41,7 +41,7 @@ function HouseDetailsPage() {
                             type="text"
                             name="firstName"
                             value={firstName}
-                            placeholder='FIRST NAME'
+                            placeholder={user.first_name}
                             onChange={(event) => setFirstName(event.target.value)}
                         />
 
@@ -53,7 +53,7 @@ function HouseDetailsPage() {
                             type="text"
                             name="lastName"
                             value={lastName}
-                            placeholder='LAST NAME'
+                            placeholder={user.last_name}
                             onChange={(event) => setLastName(event.target.value)}
                         />
 
@@ -65,7 +65,7 @@ function HouseDetailsPage() {
                             type="text"
                             name="streetAddress"
                             value={streetAddress}
-                            placeholder='STREET ADDRESS'
+                            placeholder={user.address}
                             onChange={(event) => setStreetAddress(event.target.value)}
                         />
 
@@ -77,7 +77,7 @@ function HouseDetailsPage() {
                             type="text"
                             name="phone"
                             value={phoneNumber}
-                            placeholder='PHONE #'
+                            placeholder={user.phone}
                             onChange={(event) => setPhoneNumber(event.target.value)}
                         />
 
@@ -89,7 +89,7 @@ function HouseDetailsPage() {
                             type="text"
                             name="email"
                             value={email}
-                            placeholder='EMAIL'
+                            placeholder={user.email}
                             onChange={(event) => setEmail(event.target.value)}
                         />
 
