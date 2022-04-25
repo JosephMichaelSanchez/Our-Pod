@@ -11,11 +11,9 @@ function KickMember({member}) {
 
 
     const handleRemove = () => {
-        console.log('clicked');
 
         const kick = {
             first_name: member.first_name,
-            last_name: member.last_name,
             email: member.email
         }
         swal({
