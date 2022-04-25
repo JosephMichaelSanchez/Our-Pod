@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import moment from 'moment';
 
 function TableRow({ date }) {
 
     const dispatch = useDispatch();
     const user = useSelector(store => store.user);
     const podInfo = useSelector(store => store.podInfoReducer);
+
+    const day = moment(date.date).format("MMM Do YY");
 
     const handleDelete = () => {
         console.log('the date id is', date.id);
@@ -38,7 +41,7 @@ function TableRow({ date }) {
     return (
         <>
             <tr>
-                <td>{date.date}</td>
+                <td>{day}</td>
                 <td>{date.host == 'NEEDS HOST' ? <button onClick={handleAddHost}>HOST</button> : <p>{date.host}</p>}</td>
                 <td>{user.id == podInfo.admin_id ? <button onClick={handleDelete}>DELETE</button> : <p></p>}</td>
                 <td>{date.host == user.last_name && <button onClick={handleCancel}>CANCEL</button>}</td>
