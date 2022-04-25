@@ -24,6 +24,7 @@ import CreatePodPage from '../CreatePodPage/CreatePodPage';
 import FindPodPage from '../FindPodPage/FindPodPage';
 import JoinPodPage from '../JoinPodPage/JoinPodPage';
 import MyPodPage from '../MyPodPage/MyPodPage';
+import DateForm from '../DateForm/DateForm';
 
 import './App.css';
 
@@ -111,6 +112,14 @@ function App() {
             path="/joinpod"
           >
             <JoinPodPage />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows Date Form else shows LoginPage
+            exact 
+            path="/dateform"
+          >
+            <DateForm />
           </ProtectedRoute>
 
           <Route
