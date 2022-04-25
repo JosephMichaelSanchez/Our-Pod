@@ -25,6 +25,11 @@ function KickMember({member}) {
                 icon: "success",
               });
               console.log('REMOVE');
+              dispatch({
+                  type: 'KICK_MEMBER',
+                  payload: member.id
+              })
+              console.log(member.id);
             } else {
               swal(`${member.first_name} ${member.last_name} will not be deleted.`);
             }
