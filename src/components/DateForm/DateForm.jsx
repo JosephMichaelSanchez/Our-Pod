@@ -62,7 +62,7 @@ function DateForm() {
                         <label htmlFor="newdate">
                             Add New Date:
                             <input
-                                type="text"
+                                type="date"
                                 name="newdate"
                                 value={newDate}
                                 placeholder='YYYY/MM/DD'
