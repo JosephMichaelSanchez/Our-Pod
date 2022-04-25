@@ -7,11 +7,9 @@ function* kickMemberSaga () {
 
 function* kickMember(action){
     console.log('IN kickMember');
-    const id = action.payload;
-    
     
     try {
-    yield axios.put(`/api/kickmember/${id}`)
+    yield axios.put(`/api/kickmember`, action.payload)
     yield put({type: 'GET_USER_POD'})
 
     } catch {
