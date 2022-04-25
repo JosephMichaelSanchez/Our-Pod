@@ -27,16 +27,16 @@ function DateForm() {
 
             const Id = podInfo.id
 
-            // const newHostingDate = {
-            //     date: newDate,
-            //     podId: Id
-            // }
+            const newHostingDate = {
+                date: newDate,
+                podId: Id
+            }
 
-            // console.log(newHostingDate);
+            console.log(newHostingDate);
 
             dispatch({
                 type: 'ADD_NEW_DATE',
-                payload: newDate
+                payload: newHostingDate
             })
 
         } else {
