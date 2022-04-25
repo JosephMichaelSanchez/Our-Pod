@@ -25,6 +25,7 @@ import FindPodPage from '../FindPodPage/FindPodPage';
 import JoinPodPage from '../JoinPodPage/JoinPodPage';
 import MyPodPage from '../MyPodPage/MyPodPage';
 import DateForm from '../DateForm/DateForm';
+import RemoveMember from '../RemoveMember/RemoveMember';
 
 import './App.css';
 
@@ -120,6 +121,14 @@ function App() {
             path="/dateform"
           >
             <DateForm />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows Remove Member else shows LoginPage
+            exact 
+            path="/removemember"
+          >
+            <RemoveMember />
           </ProtectedRoute>
 
           <Route
