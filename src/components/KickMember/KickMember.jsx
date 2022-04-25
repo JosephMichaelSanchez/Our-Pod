@@ -12,6 +12,12 @@ function KickMember({member}) {
 
     const handleRemove = () => {
         console.log('clicked');
+
+        const kick = {
+            first_name: member.first_name,
+            last_name: member.last_name,
+            email: member.email
+        }
         swal({
             title: "Are you sure?",
             text: `Are you sure you want to remove ${member.first_name} ${member.last_name} from your pod?`,
@@ -27,9 +33,8 @@ function KickMember({member}) {
               console.log('REMOVE');
               dispatch({
                   type: 'KICK_MEMBER',
-                  payload: member.id
+                  payload: kick
               })
-              console.log(member.id);
             } else {
               swal(`${member.first_name} ${member.last_name} will not be deleted.`);
             }
