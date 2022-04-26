@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
+import './TableRow.css'
 
 function TableRow({ date }) {
 
@@ -40,12 +41,18 @@ function TableRow({ date }) {
 
     return (
         <>
-            <tr>
+        {date.host == 'NEEDS HOST' ?
+            <tr className="needsHost">
                 <td>{day}</td>
                 <td>{date.host == 'NEEDS HOST' ? <button onClick={handleAddHost}>HOST</button> : <p>{date.host}</p>}</td>
                 <td>{user.id == podInfo.admin_id ? <button onClick={handleDelete}>DELETE</button> : <p></p>}</td>
                 <td>{date.host == user.last_name && <button onClick={handleCancel}>CANCEL</button>}</td>
-            </tr>
+            </tr> : <tr className="hasHost">
+                <td>{day}</td>
+                <td>{date.host == 'NEEDS HOST' ? <button onClick={handleAddHost}>HOST</button> : <p>{date.host}</p>}</td>
+                <td>{user.id == podInfo.admin_id ? <button onClick={handleDelete}>DELETE</button> : <p></p>}</td>
+                <td>{date.host == user.last_name && <button onClick={handleCancel}>CANCEL</button>}</td>
+            </tr>}
         </>
     )
 }
