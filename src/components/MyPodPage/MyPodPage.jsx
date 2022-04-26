@@ -4,6 +4,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import PodMember from '../PodMember/PodMember';
 import TableRow from '../TableRow/TableRow';
 
+
 import './MyPodPage.css'
 
 function MyPodPage() {
@@ -51,7 +52,7 @@ function MyPodPage() {
                 </div>
 
                 <div>
-                    <table className="dateTable">
+                    <table className="dateTable table">
                         <tr>
                             <td>DATE</td>
                             <td>HOST</td>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './HouseDetailsPage.css'
 
+
 function HouseDetailsPage() {
 
 
