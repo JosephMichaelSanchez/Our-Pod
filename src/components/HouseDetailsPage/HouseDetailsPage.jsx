@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import './HouseDetailsPage.css'
+import './HouseDetailsPage.css';
+
 
 
 function HouseDetailsPage() {
@@ -8,11 +9,11 @@ function HouseDetailsPage() {
 
     const dispatch = useDispatch();
     const user = useSelector((store) => store.user);
-    const [firstName, setFirstName] = useState(user.first_name)
-    const [lastName, setLastName] = useState(user.last_name)
-    const [streetAddress, setStreetAddress] = useState(user.address)
-    const [phoneNumber, setPhoneNumber] = useState(user.phone)
-    const [email, setEmail] = useState(user.email)
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [streetAddress, setStreetAddress] = useState('')
+    const [phoneNumber, setPhoneNumber] = useState('')
+    const [email, setEmail] = useState('')
 
     const handleSubmit = () => {
         const houseDetails = {
