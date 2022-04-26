@@ -52,12 +52,15 @@ function MyPodPage() {
                 </div>
 
                 <div>
-                    <table className="dateTable table">
+                    <table className="dateTable table table-bordered">
+                        <thead className="thead-dark">
                         <tr>
-                            <td>DATE</td>
-                            <td>HOST</td>
-                            <td>ADMIN</td>
+                            <th>DATE</th>
+                            <th>HOST</th>
+                            <th>ADMIN</th>
+                            <th>CANCEL</th>
                         </tr>
+                        </thead>
                         {dateList.map(date => {
                             return (
                                 <TableRow
