@@ -57,8 +57,8 @@ function MyPodPage() {
                         <tr>
                             <th>DATE</th>
                             <th>HOST</th>
-                            <th>ADMIN</th>
-                            <th>CANCEL?</th>
+                            <th>CANCEL</th>
+                            <th>DELETE</th>
                         </tr>
                         
                         {dateList.map(date => {

@@ -45,13 +45,13 @@ function TableRow({ date }) {
             <tr className="needsHost">
                 <td>{day}</td>
                 <td>{date.host == 'NEEDS HOST' ? <button className="btn btn-success" onClick={handleAddHost}>HOST</button> : <p>{date.host}</p>}</td>
-                <td>{user.id == podInfo.admin_id ? <button className="btn btn-dark" onClick={handleDelete}>DELETE</button> : <p></p>}</td>
                 <td>{date.host == user.last_name && <button className="btn btn-danger" onClick={handleCancel}>CANCEL</button>}</td>
+                <td>{user.id == podInfo.admin_id ? <button className="btn btn-dark" onClick={handleDelete}>DELETE</button> : <p></p>}</td>
             </tr> : <tr className="hasHost">
                 <td>{day}</td>
                 <td>{date.host == 'NEEDS HOST' ? <button onClick={handleAddHost}>HOST</button> : <p>{date.host}</p>}</td>
-                <td>{user.id == podInfo.admin_id ? <button className="btn btn-dark" onClick={handleDelete}>DELETE</button> : <p></p>}</td>
                 <td>{date.host == user.last_name && <button className="btn btn-danger" onClick={handleCancel}>CANCEL</button>}</td>
+                <td>{user.id == podInfo.admin_id ? <button className="btn btn-dark" onClick={handleDelete}>DELETE</button> : <p></p>}</td>
             </tr>}
         </>
     )
