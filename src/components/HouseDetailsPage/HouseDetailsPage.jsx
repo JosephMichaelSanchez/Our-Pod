@@ -16,6 +16,7 @@ function HouseDetailsPage() {
     const [email, setEmail] = useState('')
 
     const handleSubmit = () => {
+        
         const houseDetails = {
             first_name: firstName,
             last_name: lastName,
