@@ -34,18 +34,18 @@ function HouseDetailsPage() {
         <>
             <div className="body">
                 <h2>THIS IS THE HOUSE DETAILS PAGE</h2>
-                <form>
+                <form className="detailsForm">
                     <div>
 
                         First Name:
                         <input
                             type="text"
                             name="firstName"
+                            className="formInput"
                             value={firstName}
                             placeholder={user.first_name}
                             onChange={(event) => setFirstName(event.target.value)}
                         />
-
                     </div>
                     <div>
 
@@ -53,6 +53,7 @@ function HouseDetailsPage() {
                         <input
                             type="text"
                             name="lastName"
+                            className="formInput"
                             value={lastName}
                             placeholder={user.last_name}
                             onChange={(event) => setLastName(event.target.value)}
@@ -65,6 +66,7 @@ function HouseDetailsPage() {
                         <input
                             type="text"
                             name="streetAddress"
+                            className="formInput"
                             value={streetAddress}
                             placeholder={user.address}
                             onChange={(event) => setStreetAddress(event.target.value)}
@@ -77,6 +79,7 @@ function HouseDetailsPage() {
                         <input
                             type="text"
                             name="phone"
+                            className="formInput"
                             value={phoneNumber}
                             placeholder={user.phone}
                             onChange={(event) => setPhoneNumber(event.target.value)}
@@ -89,13 +92,14 @@ function HouseDetailsPage() {
                         <input
                             type="text"
                             name="email"
+                            className="formInput"
                             value={email}
                             placeholder={user.email}
                             onChange={(event) => setEmail(event.target.value)}
                         />
 
                     </div>
-                    <button onClick={handleSubmit}>SUBMIT DETAILS</button>
+                    <button className="btn btn-success" onClick={handleSubmit}>SUBMIT DETAILS</button>
                 </form>
             </div>
         </>
