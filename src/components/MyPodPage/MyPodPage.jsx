@@ -47,8 +47,8 @@ function MyPodPage() {
                 </div>
 
                 <div className="adminButtons">
-                    {user.id == podInfo.admin_id && <button onClick={() => { history.push('/removemember') }}>EDIT POD</button>}
-                    {user.id == podInfo.admin_id && <button onClick={() => { history.push('/dateform') }}>ADD DATES</button>}
+                    {user.id == podInfo.admin_id && <button className="btn btn-warning" onClick={() => { history.push('/removemember') }}>EDIT POD</button>}
+                    {user.id == podInfo.admin_id && <button className="btn btn-warning" onClick={() => { history.push('/dateform') }}>ADD DATES</button>}
                 </div>
 
                 <div>
