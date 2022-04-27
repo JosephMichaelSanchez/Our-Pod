@@ -33,7 +33,7 @@ function MyPodPage() {
     return (
         <>
             <div className="body">
-                <h2>MY POD PAGE</h2>
+                <h2>OUR POD</h2>
                 <div className="podMemberContainer">
                     {podList.map(member => {
                         return (

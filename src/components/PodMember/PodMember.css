@@ -1,4 +1,4 @@
-.memberDiv {
+.member {
     border: 2px solid black;
     width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -6,10 +6,15 @@
     border-radius: 5px;
     margin: 4px;
     border: 2px;
-    background-color: black;
-    color: white;
+    background-color: rgb(90, 132, 142);
+    color: rgb(10, 1, 1);
     font-family: Helvetica, sans-serif;
     font-size: 15px;
+    padding: 7px;
 
 
+}
+
+.member:hover {
+    transform: scale(1.2);
 }
