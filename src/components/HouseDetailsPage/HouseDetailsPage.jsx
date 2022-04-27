@@ -35,7 +35,7 @@ function HouseDetailsPage() {
     return (
         <>
             <div className="body">
-                <h2>THIS IS THE HOUSE DETAILS PAGE</h2>
+                <h2 className="title">Your House Details</h2>
                 <form className="detailsForm">
                     <div>
 
@@ -102,6 +102,9 @@ function HouseDetailsPage() {
 
                     </div>
                     <button className="btn btn-success" onClick={handleSubmit}>SUBMIT DETAILS</button>
+                    <div>
+                    <button className="btn btn-secondary" onClick={handleSubmit}>BACK</button>
+                    </div>
                 </form>
             </div>
         </>

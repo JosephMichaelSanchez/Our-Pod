@@ -13,3 +13,11 @@
     margin-bottom: 10px;
 
 }
+
+.title {
+    margin: 15px;
+}
+
+.formInput::placeholder{
+    color: black;
+}
