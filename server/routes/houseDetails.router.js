@@ -40,7 +40,7 @@ const {
     if (req.body.email.length < 1) {
         email = req.user.email
     } else {
-        lastName = req.body.email
+        email = req.body.email
     }
 
 

@@ -113,7 +113,7 @@ function HouseDetailsPage() {
                         />
 
                     </div>
-                    <button className="btn btn-success" onClick={handleSubmit}>SUBMIT DETAILS</button>
+                    <button type="button" className="btn btn-success" onClick={handleSubmit}>SUBMIT DETAILS</button>
                     <div>
                     <button className="btn btn-secondary" onClick={() => {history.push('/user');}}>BACK</button>
                     </div>
