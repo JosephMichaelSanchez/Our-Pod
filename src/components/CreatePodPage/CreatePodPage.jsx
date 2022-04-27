@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import './CreatePodPage.css'
+import { useHistory } from 'react-router-dom';
+import './CreatePodPage.css';
+import swal from 'sweetalert';
 
 function CreatePodPage() {
 
     const dispatch = useDispatch();
     const [podName, setPodName] = useState('');
     const [keyCode, setKeyCode] = useState('');
+    const history = useHistory();
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -23,12 +26,22 @@ function CreatePodPage() {
             type: 'CREATE_POD',
             payload: newPod
         })
+
+        swal({
+            title: "Pod Created!",
+            text: `You have created the ${podName} pod!`,
+            icon: "success",
+            button: "OK!",
+          });
+
+          history.push('/user');
     }
 
     return (
         <>
             <div className="body">
-                <h2>THIS IS THE CREATE A POD PAGE</h2>
+                <h2>Create your Pod!</h2>
+                <h4>Give your pod a name to go by.</h4>
 
                 <form>
                     <div>
@@ -56,7 +69,10 @@ function CreatePodPage() {
 
                     </div>
 
-                    <button onClick={handleSubmit}>CREATE POD</button>
+                    <button className="btn btn-success" onClick={handleSubmit}>CREATE POD</button>
+                    <div>
+                        <button className="btn btn-secondary">BACK</button>
+                    </div>
                 </form>
             </div>
         </>
