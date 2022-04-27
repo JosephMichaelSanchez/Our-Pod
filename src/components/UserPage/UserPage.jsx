@@ -7,7 +7,7 @@ function UserPage() {
   const user = useSelector((store) => store.user);
   return (
     <div className="container">
-      <h2>Welcome, {user.username}!</h2>
+      <h2>Welcome to OurPod, {user.username}!</h2>
       <LogOutButton className="btn btn-dark" />
     </div>
   );
