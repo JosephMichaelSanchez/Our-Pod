@@ -2,6 +2,8 @@ html,
 body,
 #react-root {
   height: 100%;
+  background-image: url('/public/IMG_0225.JPG');
+  background-size: 3000px 1500px;
 }
 
 body {
