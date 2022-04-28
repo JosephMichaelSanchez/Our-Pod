@@ -5,6 +5,7 @@ import findPodReducer from './findPod.reducer';
 import myPodReducer from './myPod.reducer';
 import podDatesReducer from './podDates.reducer';
 import podInfoReducer from './podInfo.reducer';
+import keyCodeReducer from './keyCode.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   myPodReducer,
   podDatesReducer,
   podInfoReducer,
+  keyCodeReducer,
 });
 
 export default rootReducer;
