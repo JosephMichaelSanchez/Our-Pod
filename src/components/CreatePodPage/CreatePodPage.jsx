@@ -64,7 +64,7 @@ function CreatePodPage() {
                     <div></div>
                     <button className="btn btn-danger" onClick={handleKeyCode}>GENERATE MY KEY CODE!</button>
                     <h4>Your Key Code is: {keyCode}</h4>
-                    <h4>Give your pod a name to go by.</h4>
+                    <h4 className="stepTwo">Step 2: Give your pod a name to go by.</h4>
 
                     <form>
                         <div>
@@ -79,18 +79,6 @@ function CreatePodPage() {
                             />
 
                         </div>
-                        {/* <div>
-
-                            Pod Key Code:
-                            <input
-                                type="text"
-                                name="keyCode"
-                                value={keyCode}
-                                placeholder='KEY CODE'
-                                onChange={(event) => setKeyCode(event.target.value)}
-                            />
-
-                        </div> */}
 
                         <button className="btn btn-success" onClick={handleSubmit}>CREATE POD</button>
                         <div>
