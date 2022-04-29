@@ -29,8 +29,9 @@ function RegisterForm() {
       )}
       <div>
         <label htmlFor="username">
-          Username:
+          Username
           <input
+            className="username"
             type="text"
             name="username"
             value={username}
@@ -41,8 +42,9 @@ function RegisterForm() {
       </div>
       <div>
         <label htmlFor="password">
-          Password:
+          Password
           <input
+            className="password"
             type="password"
             name="password"
             value={password}
