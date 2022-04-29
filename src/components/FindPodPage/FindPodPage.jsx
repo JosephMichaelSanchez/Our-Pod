@@ -25,7 +25,7 @@ function FindPodPage() {
             <div className="body">
                 <h2>FIND YOUR POD</h2>
                 <h4>ENTER THE KEY CODE OF THE POD YOU WOULD LIKE TO JOIN</h4>
-                <input type="text" name="keyCode" placeholder='KEY CODE' onChange={(event) => setKeyCode(event.target.value)} /> <button className="btn btn-success" onClick={handleSubmit}>FIND POD</button>
+                <input className="codeInput" type="text" name="keyCode" placeholder='KEY CODE' onChange={(event) => setKeyCode(event.target.value)} /> <button className="btn btn-success" onClick={handleSubmit}>FIND POD</button>
 
             </div>
         </>
