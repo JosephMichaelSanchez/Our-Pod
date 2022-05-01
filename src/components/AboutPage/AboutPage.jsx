@@ -1,4 +1,5 @@
 import React from 'react';
+import './AboutPage.css'
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -18,6 +19,8 @@ function AboutPage() {
           <li>Chance.js</li>
           <li>SweetAlert</li>
           <li>Bootstrap</li>
+          <li>PostgreSQL</li>
+          <li>Passport</li>
         </ul>
         <ul>
           <lh>Thanks!</lh>
