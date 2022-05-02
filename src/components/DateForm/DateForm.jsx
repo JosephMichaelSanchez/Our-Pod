@@ -21,7 +21,7 @@ function DateForm() {
     //         payload: user.pod_id
     //     })
     // }, [])
-   
+
 
     const handleSubmit = () => {
 
@@ -53,7 +53,7 @@ function DateForm() {
             text: `New date added!`,
             icon: "success",
             button: "OK!",
-          });
+        });
 
 
 
@@ -65,32 +65,33 @@ function DateForm() {
 
     return (
         <>
-            <div className="body">
-                <h3>ADD NEW DATES</h3>
-                <form>
-                    <div>
-                        <label htmlFor="newdate">
-                            Add New Date:
-                            <input
-                                type="date"
-                                name="newdate"
-                                className="formInput"
-                                value={newDate}
-                                placeholder='YYYY/MM/DD'
-                                onChange={(event) => setNewDate(event.target.value)}
-                            />
-                        </label>
-                    </div>
-                    <div>
-                        <button className="btn btn-primary" onClick={handleSubmit}>ADD DATE</button>
+            {user.id === podInfo.admin_id ?
+                <div className="body">
+                    <h3>ADD NEW DATES</h3>
+                    <form>
                         <div>
-                            <button className="btn btn-secondary" onClick={() => { history.push(`/mypod`) }}>BACK TO POD PAGE</button>
+                            <label htmlFor="newdate">
+                                Add New Date:
+                                <input
+                                    type="date"
+                                    name="newdate"
+                                    className="formInput"
+                                    value={newDate}
+                                    placeholder='YYYY/MM/DD'
+                                    onChange={(event) => setNewDate(event.target.value)}
+                                />
+                            </label>
                         </div>
-                    </div>
+                        <div>
+                            <button className="btn btn-primary" onClick={handleSubmit}>ADD DATE</button>
+                            <div>
+                                <button className="btn btn-secondary" onClick={() => { history.push(`/mypod`) }}>BACK TO POD PAGE</button>
+                            </div>
+                        </div>
 
 
-                </form>
-            </div>
+                    </form>
+                </div> : <p>You don't belong here!</p>}
         </>
     )
 }
