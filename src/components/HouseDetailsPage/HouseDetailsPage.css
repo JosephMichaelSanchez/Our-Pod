@@ -1,4 +1,35 @@
-.body {
+/* .body {
     justify-content: center;
     text-align: center;
+    
+} */
+
+
+.formInput {
+    width: 300px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    
+
+}
+
+.title {
+    margin: 15px;
+    margin-bottom: 100px;
+}
+
+.formInput::placeholder{
+    color: black;
+}
+
+.alignDiv {
+    width: 350px;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+   
+
 }

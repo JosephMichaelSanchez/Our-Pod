@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import './DateForm.css'
+import swal from 'sweetalert';
 
 function DateForm() {
     const history = useHistory();
@@ -19,6 +21,7 @@ function DateForm() {
     //         payload: user.pod_id
     //     })
     // }, [])
+   
 
     const handleSubmit = () => {
 
@@ -45,6 +48,13 @@ function DateForm() {
 
         setNewDate('');
 
+        swal({
+            title: "Success!",
+            text: `New date added!`,
+            icon: "success",
+            button: "OK!",
+          });
+
 
 
     }
@@ -56,7 +66,7 @@ function DateForm() {
     return (
         <>
             <div className="body">
-                <h3>THIS IS THE DATE FORM</h3>
+                <h3>ADD NEW DATES</h3>
                 <form>
                     <div>
                         <label htmlFor="newdate">
@@ -64,6 +74,7 @@ function DateForm() {
                             <input
                                 type="date"
                                 name="newdate"
+                                className="formInput"
                                 value={newDate}
                                 placeholder='YYYY/MM/DD'
                                 onChange={(event) => setNewDate(event.target.value)}
@@ -71,9 +82,9 @@ function DateForm() {
                         </label>
                     </div>
                     <div>
-                        <button onClick={handleSubmit}>ADD DATE</button>
+                        <button className="btn btn-primary" onClick={handleSubmit}>ADD DATE</button>
                         <div>
-                            <button onClick={() => { history.push(`/mypod`) }}>BACK TO POD PAGE</button>
+                            <button className="btn btn-secondary" onClick={() => { history.push(`/mypod`) }}>BACK TO POD PAGE</button>
                         </div>
                     </div>
 

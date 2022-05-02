@@ -1,0 +1,15 @@
+.hasHost {
+    background-color: rgb(211, 238, 172);
+}
+
+.needsHost {
+    background-color: rgb(240, 188, 188);
+}
+tr {
+    height: 60px;
+}
+
+td {
+    align-content: center;
+    vertical-align: auto;
+}

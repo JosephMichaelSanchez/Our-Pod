@@ -29,8 +29,9 @@ function RegisterForm() {
       )}
       <div>
         <label htmlFor="username">
-          Username:
+          Username
           <input
+            className="username"
             type="text"
             name="username"
             value={username}
@@ -41,8 +42,9 @@ function RegisterForm() {
       </div>
       <div>
         <label htmlFor="password">
-          Password:
+          Password
           <input
+            className="password"
             type="password"
             name="password"
             value={password}
@@ -52,7 +54,7 @@ function RegisterForm() {
         </label>
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Register" />
+        <input className="btn btn-success" type="submit" name="submit" value="Register" />
       </div>
     </form>
   );

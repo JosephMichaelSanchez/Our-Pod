@@ -4,6 +4,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import PodMember from '../PodMember/PodMember';
 import TableRow from '../TableRow/TableRow';
 
+
 import './MyPodPage.css'
 
 function MyPodPage() {
@@ -32,7 +33,7 @@ function MyPodPage() {
     return (
         <>
             <div className="body">
-                <h2>MY POD PAGE</h2>
+                <h2>OUR POD</h2>
                 <div className="podMemberContainer">
                     {podList.map(member => {
                         return (
@@ -46,17 +47,20 @@ function MyPodPage() {
                 </div>
 
                 <div className="adminButtons">
-                    {user.id == podInfo.admin_id && <button onClick={() => { history.push('/removemember') }}>EDIT POD</button>}
-                    {user.id == podInfo.admin_id && <button onClick={() => { history.push('/dateform') }}>ADD DATES</button>}
+                    {user.id == podInfo.admin_id && <button className="btn btn-warning" onClick={() => { history.push('/removemember') }}>EDIT POD</button>}
+                    {user.id == podInfo.admin_id && <button className="btn btn-warning" onClick={() => { history.push('/dateform') }}>ADD DATES</button>}
                 </div>
 
                 <div>
                     <table className="dateTable">
+                        
                         <tr>
-                            <td>DATE</td>
-                            <td>HOST</td>
-                            <td>ADMIN</td>
+                            <th>DATE</th>
+                            <th>HOST</th>
+                            <th>CANCEL</th>
+                            <th>DELETE</th>
                         </tr>
+                        
                         {dateList.map(date => {
                             return (
                                 <TableRow

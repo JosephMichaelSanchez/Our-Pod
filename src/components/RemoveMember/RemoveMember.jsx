@@ -23,7 +23,7 @@ function RemoveMember() {
     return (
         <>
             <div className="body">
-                <h2>THIS IS THE REMOVE MEMBER PAGE</h2>
+                <h2>REMOVE A POD MEMBER</h2>
                 <div className="podMemberContainer">
                     {podList.map(member => {
                         return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import './AboutPage.css'
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -9,7 +10,24 @@ function AboutPage() {
   return (
     <div className="container">
       <div>
-        <p>This about page is for anyone to read!</p>
+        <ul>
+          <lh>Technologies Used</lh>
+          <li>Node.js</li>
+          <li>React</li>
+          <li>React Redux</li>
+          <li>Redux-Saga</li>
+          <li>Chance.js</li>
+          <li>SweetAlert</li>
+          <li>Bootstrap</li>
+          <li>PostgreSQL</li>
+          <li>Passport</li>
+        </ul>
+        <ul>
+          <lh>Thanks!</lh>
+          <li>Butler Cohort</li>
+          <li>Prime Instructors and Staff, especially Dane</li>
+          <li>Most of all, my family</li>
+        </ul>
       </div>
     </div>
   );

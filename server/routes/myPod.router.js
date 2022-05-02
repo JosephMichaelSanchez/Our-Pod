@@ -8,7 +8,8 @@ const {
   router.get('/', rejectUnauthenticated, (req, res) => {
     
     const query = `SELECT "user".id, "user".first_name, "user".last_name, "user".address, "user".phone, "user".email FROM "user"
-    WHERE "pod_id" = $1;`;
+    WHERE "pod_id" = $1
+    ORDER BY "id" ASC;`;
     const values = [req.user.pod_id]
     pool.query(query, values)
       .then( result => {

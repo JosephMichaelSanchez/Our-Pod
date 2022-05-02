@@ -47,7 +47,7 @@ function KickMember({member}) {
                 <p>{member.address}</p>
                 <p>{member.phone}</p>
                 <p>{member.email}</p>
-                <p>{member.last_name != user.last_name ? <button onClick={handleRemove}>REMOVE</button> : <span>ADMIN</span>}</p>
+                <p>{member.last_name != user.last_name ? <button className="btn btn-light" onClick={handleRemove}>REMOVE</button> : <span>ADMIN</span>}</p>
 
             </div>
         </>
