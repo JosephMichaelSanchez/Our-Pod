@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import LogOutButton from '../LogOutButton/LogOutButton';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './UserPage.css'
 
 function UserPage() {
@@ -10,15 +10,19 @@ function UserPage() {
 
   useEffect(() => {
     dispatch({
-        type: 'GET_USER_POD'
+      type: 'RESET_ALL'
+    })
+
+    dispatch({
+      type: 'GET_USER_POD'
     })
     dispatch({
-        type: 'GET_POD_INFO'
+      type: 'GET_POD_INFO'
     })
     dispatch({
-        type: 'GET_DATES'
+      type: 'GET_DATES'
     })
-}, [])
+  }, [])
 
 
 

@@ -3,7 +3,9 @@ const keyCodeReducer = (state = '', action) => {
         case 'SET_KEYCODE':
             return action.payload;
         case 'CLEAR_KEYCODE':
-            return '';    
+            return ''; 
+        case 'RESET_ALL':
+            return '';       
         default:
             return state;
     }
