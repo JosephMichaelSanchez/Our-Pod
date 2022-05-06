@@ -24,20 +24,20 @@ and remove members from their pod.
 5. Run `npm run client` in a separate terminal tab.
 
 ## Built With
-Node.js
-React
-React Redux
-Redux-Saga
-Chance.js
-SweetAlert
-Bootstrap
-PostgreSQL
-Passport
+* Node.js
+* React
+* React Redux
+* Redux-Saga
+* Chance.js
+* SweetAlert
+* Bootstrap
+* PostgreSQL
+* Passport
 
 ## Thanks!
-Butler Cohort
-Prime Instructors and Staff, especially Dane Smith
-Most of all, my family
+* Butler Cohort
+* Prime Instructors and Staff, especially Dane Smith
+* Most of all, my family
 
 
 
