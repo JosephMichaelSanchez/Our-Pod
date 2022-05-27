@@ -10,7 +10,7 @@ and remove members from their pod.
 
 [![SS1.png](https://i.postimg.cc/kgL38h01/SS1.png)](https://postimg.cc/xXG4VgTM)
 
-[![SS3.png](https://i.postimg.cc/Cxq6WMXN/SS3.png)](https://postimg.cc/k27cSCn6)
+[![newss.png](https://i.postimg.cc/zfmXrBBX/newss.png)](https://postimg.cc/FYZQbh32)
 
 [![SS2.png](https://i.postimg.cc/QCdyPQZ9/SS2.png)](https://postimg.cc/KkCf3gzx)
 
