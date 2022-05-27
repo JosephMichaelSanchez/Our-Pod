@@ -12,7 +12,7 @@ and remove members from their pod.
 
 [![SS2.png](https://i.postimg.cc/QCdyPQZ9/SS2.png)](https://postimg.cc/KkCf3gzx)
 
-[![SS3.png](https://i.postimg.cc/1XvbzW0K/SS3.png)](https://postimg.cc/K3g0qDHK)
+[![SS3.png](https://i.postimg.cc/Cxq6WMXN/SS3.png)](https://postimg.cc/k27cSCn6)
 
 
 ## Installation
